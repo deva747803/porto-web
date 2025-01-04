@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfd;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e4e4e4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+        header.dark-mode {
+            background-color: #2c6b2f;
+        }
+
+        header .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            margin: 0 auto 20px;
+            display: block;
+            background-color: #fff;
+            object-fit: cover;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .section {
+            margin: 40px 0;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .section.dark-mode h2 {
+            color: #8bc34a;
+        }
+
+        .about p {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        .resume {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .resume-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .resume-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .resume-item h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .resume-item.dark-mode {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            transition: background-color 0.3s;
+        }
+
+        footer.dark-mode {
+            background-color: #1c1c1c;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #4CAF50;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #333;
+        }
+
+        /* Dark mode toggle button */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+
+    <header>
+        <!-- Foto Profil -->
+        <img src="profile.jpeg" alt="Profile Picture" class="profile-img">
+        <h1>Arya Daiva Maulana</h1>
+        <p>Web Developer | Designer | Freelancer | Content Creator | Video Grapher</p>
+    </header>
+
+    <div class="container">
+        <section class="about section">
+            <h2>About Me</h2>
+            <p>
+                Mahasiswa semester 5 jurusan Teknologi Informasi. Memiliki pengalaman dalam pengembangan web dan desain UI/UX, serta keterampilan dalam PHP, HTML, CSS, JavaScript, Flutter, dan manajemen database. Saya sedang mencari peluang magang untuk memperluas pengalaman dan pengetahuan saya di dunia kerja.
+            </p>
+        </section>
+
+        <section class="resume section">
+            <h2>Resume</h2>
+            <div class="resume">
+                <div class="resume-item">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>SDN 1 LETEH, Rembang (2009 - 2015)</li>
+                        <li>SMP Gema Nurul Huda, Jakarta Timur (2015 - 2018)</li>
+                        <li>SMK AL-Akhyar 2 (Electro), Jakarta Timur (2018 - 2021)</li>
+                        <li>Universitas Darma Persada (Teknologi Informatika) (2021 - Sekarang)</li>
+                    </ul>
+                </div>
+                <div class="resume-item">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>Head Server - Sambal Bakar Cab JGC (3 bulan)</li>
+                        <li>Admin Warehouse - PT Segara Market (2 tahun)</li>
+                        <li>Warehouse - PT Hari-Hari Pasar Swalayan (6 bulan)</li>
+                        <li>Part-time - CV Pandawa Karya Yudha (6 bulan)</li>
+                    </ul>
+                </div>
+                <div class="resume-item">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript, PHP, Flutter, Github</li>
+                        <li>Database Management</li>
+                        <li>Web Design</li>
+                        <li>Web Hosting Setup</li>
+                        <li>UML (Unified Modeling Language)</li>
+                    </ul>
+                </div>
+                <div class="resume-item">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li>Portfolio Website</li>
+                        <li>E-commerce Platform</li>
+                        <li>Blog Application</li>
+                        <li>Company Website</li>
+                        <li>Online Portfolio</li>
+                        <li>Making Activity Diagram For Company</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section">
+            <h2>Contact Me</h2>
+            <p>Let's connect! Feel free to reach out through any of the platforms below.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/18MaRNBwBK/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmusuhgadunnnn_%2Fprofilecard%2F%3Figsh%3DN3ZzMndraWg4YjF6&is_from_rle" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/081398790919" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Arya Daiva Maulana. Designed with &#10084;. <a href="#">Back to Top</a></p>
+    </footer>
+
+    <script>
+        // Toggle Dark Mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('header').classList.toggle('dark-mode');
+            document.querySelectorAll('.section').forEach((section) => {
+                section.classList.toggle('dark-mode');
+            });
+            document.querySelectorAll('.resume-item').forEach((item) => {
+                item.classList.toggle('dark-mode');
+            });
+            document.querySelector('footer').classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
